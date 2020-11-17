@@ -7,6 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 enum Status { Uninitialized, Authenticated, Authenticating, Unauthenticated }
 
+
 class UserRepository with ChangeNotifier {
   FirebaseAuth _auth;
   User _user;

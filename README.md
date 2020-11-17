@@ -1,16 +1,22 @@
-# hello_me
+                                ##############
+                                ## dry part ##
+                                ##############
+# question 1
+    the controller of snapping_sheet is implemented with the SnappingSheetController class.
+    this controller allows the user to set a listener to events and accordingly set the sheet
+    into each of its defined snapping positions. it allows the user to query the current position
+    of the sheet and where to move it.
 
-A new Flutter application.
+# question 2
+   inorder to set an animation to the snapping movement of the snapping sheet we use parameter
+   'snappingCurve' when we declare a SnapPosition. this parameter takes an instance from the Curves class
+   which allows us to set many different movement animations for our objects' movement.
 
-## Getting Started
+# question 3
+    GestureDetector provides more controls over InkWell such as dragging which is a nice thing to have for your UX
+    on the other InkWell include the popular ripple effect , which is also nice for your UX.
+    in the end, one is better then the other only in context of what kind of UX you are looking for
+    and what suits the app better.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
