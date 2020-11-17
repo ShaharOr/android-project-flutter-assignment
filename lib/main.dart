@@ -69,11 +69,12 @@ class _RandomWordsState extends State<RandomWords> {
   final List<WordPair> _suggestions = <WordPair>[];
   final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
   final _profileSheetcontroller = SnappingSheetController();
-
+  final _key = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           title: Text('Startup Name Generator'),
           actions: [
@@ -162,6 +163,13 @@ class _RandomWordsState extends State<RandomWords> {
                         });
                         Provider.of<UserRepository>(context,listen: false).imageUrl = await Provider.of<UserRepository>(context,listen: false).uploadImage(file,  Provider.of<UserRepository>(context,listen: false).user.uid + ".png");
                         setState(() {});
+                      } else {
+                        _key.currentState.showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                  "No image selected"),
+                            )
+                        );
                       }
                     },
                     child: Text("change avatar"),
